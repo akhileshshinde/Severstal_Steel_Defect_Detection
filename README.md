@@ -6,6 +6,12 @@
 The task was to classify industrial equipment images into:
 - **Defective**
 - **Non-Defective**
+  
+## 📂 Dataset
+The dataset used is the **Severstal Steel Defect Detection** dataset from Kaggle.
+
+🔗 [Download Dataset from Kaggle](https://www.kaggle.com/competitions/severstal-steel-defect-detection/data)
+
 
 ### 🔹 Bonus Objectives
 - Identify and classify specific defect types.
