@@ -45,22 +45,22 @@ def move_files(img_list, img_src, lbl_src, img_dst, lbl_dst):
 move_files(train_images, train_img_dir, label_dir, split_train_img, split_train_lbl)
 move_files(val_images, train_img_dir, label_dir, split_val_img, split_val_lbl)
 
-print(f"✅ Train images: {len(train_images)}, Val images: {len(val_images)}")
+print(f"Train images: {len(train_images)}, Val images: {len(val_images)}")
 
 # Create data.yaml
 data_yaml = {
     'train': str(split_train_img.resolve()),
     'val': str(split_val_img.resolve()),
-    'nc': 4,   # number of classes (adjust if needed)
-    'names': ['crazing', 'inclusion', 'pitted_surface', 'scratches']  # edit per dataset
+    'nc': 4,   
+    'names': ['crazing', 'inclusion', 'pitted_surface', 'scratches']  #i have changes their name, edit per dataset
 }
 
 with open(dataset_dir / "data.yaml", 'w') as f:
     yaml.dump(data_yaml, f, default_flow_style=False)
 
-print("✅ data.yaml created at:", dataset_dir / "data.yaml")
+print(" data.yaml created at:", dataset_dir / "data.yaml")
 
 # Training command
 print("\nRun this command to train:")
-print(f"python yolov5/segment/train.py --img 256 1600 --batch 16 --epochs 100 "
-      f"--data {dataset_dir/'data.yaml'} --weights yolov5s-seg.pt --device 0")
+print(f"python train.py --img 256 --batch 2 --epochs 30 "
+      f"--data {dataset_dir/'data.yaml'} --weights yolov5s.pt --device 0")
