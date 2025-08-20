@@ -37,6 +37,5 @@ I used **YOLOv5** for defect classification instead of a traditional CNN.
 
 ## 🔧 Installation
 ```bash
-git clone https://github.com/<your-username>/ML-AI-Defect-Classification.git
-cd ML-AI-Defect-Classification
+git clone [https://github.com/<your-username>/ML-AI-Defect-Classification.git](https://github.com/akhileshshinde/Severstal_Steel_Defect_Detection.git)
 pip install -r requirements.txt
